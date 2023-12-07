@@ -1,5 +1,5 @@
 class Star {
-  int myX, myY;
+  private int myX, myY;
   public Star() {
     myX = (int)(Math.random()*500);
     myY= (int)(Math.random()*500);
