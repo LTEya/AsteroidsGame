@@ -2,6 +2,7 @@ Spaceship bob;
 Star[] nightSky= new Star[200];
 Asteriod astrd;
 ArrayList <Asteriod> ast = new ArrayList <Asteriod>();
+ArrayList <Bullet> shots = new ArrayList <Bullet>();
 
 public void setup() {
   size(500, 500);
@@ -26,19 +27,24 @@ public void draw() {
    if (d<10)
      ast.remove(i);
   }
+  for(int i=0;i<shots.size();i++){
+    shots.get(i).move();
+    shots.get(i).show();
+  }
 
 }
 
 public void keyPressed() {
   if (key == 'h')
     bob.hyperspace();
-  if (key == 'e')
+  if (key == 'd')
     bob.turn(45);
-  if (key == 'q')
+  if (key == 'a')
     bob.turn(-45);
   if (key == 'w') {
     bob.accelerate(5);
     bob.move();
   }
+  if (key == ' ')
+    shots.add(new Bullet(bob));
 }
-
