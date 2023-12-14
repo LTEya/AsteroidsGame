@@ -16,10 +16,9 @@ class Spaceship extends Floater {
     myXspeed = (int)Math.random()*10;
     myYspeed = (int)Math.random()*10;
   }
-  public double getXshp(){
-    return myCenterX;
-  }
-  public double getYshp(){
-    return myCenterY;
-  }
+  public double getXshp(){return myCenterX;}
+  public double getYshp(){return myCenterY;}
+  public double getPD(){return myPointDirection;}
+  public double getXspd(){return myXspeed;}
+  public double getYspd(){return myYspeed;}
 }
